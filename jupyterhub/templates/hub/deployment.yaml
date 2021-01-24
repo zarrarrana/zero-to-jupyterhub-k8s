@@ -42,7 +42,7 @@ spec:
             name: hub-config
         - name: secret
           secret:
-            secretName: {{ .Values.hub.existingSecret | default "hub-secret" }}
+            secretName: "hub-secret"
         {{- if .Values.hub.extraVolumes }}
         {{- .Values.hub.extraVolumes | toYaml | trimSuffix "\n" | nindent 8 }}
         {{- end }}
